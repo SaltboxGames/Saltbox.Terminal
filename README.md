@@ -82,4 +82,3 @@ Alternatively any commands that require Unity Assets can be created by inheritin
 you can then add an instance of your command to either the Runtime or Editor Commands list in your command runner.
 
 ![command-runner](https://user-images.githubusercontent.com/1238853/82846319-950f3c80-9ebe-11ea-8cc6-96053b78ccc7.png)
-
