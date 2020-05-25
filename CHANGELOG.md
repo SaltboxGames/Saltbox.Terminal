@@ -1,3 +1,10 @@
+## [1.0.1](https://github.com/SaltboxGames/Saltbox.Terminal/compare/v1.0.0...v1.0.1) (2020-05-25)
+
+
+### Bug Fixes
+
+* typo in asmdef ([ceabd70](https://github.com/SaltboxGames/Saltbox.Terminal/commit/ceabd709fc41d0f08791a36e841be975c63e3b2f))
+
 # 1.0.0 (2020-05-25)
 
 
