@@ -1,0 +1,19 @@
+{
+    "name": "Saltbox.Terminals.Editor",
+    "references": [
+        "GUID:65e5137fbed5cca4780b1ad3ef9ca605",
+        "GUID:75705102ef7e42541b5e19fe41d29f2f",
+        "GUID:5f1a963fb479e3a4c9b47b8b700bd5e7"
+    ],
+    "includePlatforms": [
+        "Editor"
+    ],
+    "excludePlatforms": [],
+    "allowUnsafeCode": false,
+    "overrideReferences": false,
+    "precompiledReferences": [],
+    "autoReferenced": true,
+    "defineConstraints": [],
+    "versionDefines": [],
+    "noEngineReferences": false
+}
