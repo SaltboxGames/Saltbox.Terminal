@@ -1,0 +1,11 @@
+{
+    "name": "com.saltboxgames.saltbox.terminal",
+    "displayName": "Saltbox Terminal",
+    "version": "0.0.1",
+    "unity": "2019.3",
+    "description": "Command Line Terminal for Unity",
+    "author": {
+        "name": "DustedHam",
+        "email": "jon.gardner@Saltboxgames.com"
+    }
+}
