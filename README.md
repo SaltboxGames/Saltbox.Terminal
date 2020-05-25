@@ -1,7 +1,10 @@
 # Saltbox.Terminal
 [![openupm](https://img.shields.io/npm/v/com.saltboxgames.saltbox.terminal?label=openupm&registry_uri=https://package.openupm.com)](https://openupm.com/packages/com.saltboxgames.saltbox.terminal/)
 
-CommandLine Terminal for Unity Games
+A CommandLine Terminal for Unity Games
+
+![terminal](https://user-images.githubusercontent.com/1238853/82847125-ba05ae80-9ec2-11ea-8789-a28f338ffa17.png)
+
 
 ## Installing from **OpenUPM**
 You can easily install this package using OpenUPM CLI
