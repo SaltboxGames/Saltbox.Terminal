@@ -82,7 +82,7 @@ namespace Saltbox.Terminal
 
         public void AddCommand(string name, ICommand command)
         {
-            if(commands.ContainsKey(name))
+            if(commands.ContainsKey(name.ToLower()))
             {
                 Debug.LogError($"Command {name} already exists!");
                 return;
@@ -93,7 +93,7 @@ namespace Saltbox.Terminal
 
         public void RemoveCommand(string name)
         {
-            commands.Remove(name);
+            commands.Remove(name.ToLower());
         }
 
         private void Control_OnInputSubmit(ITerminalControl sender, TerminalEventArgs args)
