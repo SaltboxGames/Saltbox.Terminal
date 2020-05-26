@@ -19,7 +19,6 @@ npm install -g openupm-cli
 
 ## Usage
 Assets and scripts are available under the `saltbox.terminal` namespace.
-*This documentation is incomplete*
 
 The default Terminal is available under Window dropdown. The first time you open the terminal it will create two scriptable objects `Commands` and `TerminalSettings`. 
 
@@ -85,3 +84,56 @@ Alternatively any commands that require Unity Assets can be created by inheritin
 you can then add an instance of your command to either the Runtime or Editor Commands list in your command runner.
 
 ![command-runner](https://user-images.githubusercontent.com/1238853/82846319-950f3c80-9ebe-11ea-8cc6-96053b78ccc7.png)
+
+### Creating New Terminal
+New Terminal windows can be created by implementing the `ITerminalControl` interface and adding a reference to your `CommandRunner`
+
+```cs
+    public class InGameTerminal : MonoBehaviour, ITerminalControl
+    {
+        public event TerminalEvent OnInputSubmit;
+
+        public string Name => "Game";
+
+        [SerializeField]
+        private CommandRunner runner;
+
+        [SerializeField]
+        private TextMeshPro text;
+
+        private void OnEnable()
+        {
+            runner.AddControl(this);
+        }
+
+        private void OnDisable()
+        {
+            runner.RemoveControl(this);
+        }
+
+        public void Clear()
+        {
+            text.text = "";
+        }
+
+        public void Write(string content, Color color)
+        {
+            string hex = ColorUtility.ToHtmlStringRGB(color);
+            text.text += $"<{hex}>" + content + "</color>";
+        }
+
+        public void WriteLine(string content, Color color)
+        {
+            text.text += "\n";
+            Write(content, color);
+        }
+
+        public void Submit(string content)
+        {
+            OnInputSubmit?.Invoke(this, new TerminalEventArgs()
+            {
+                content = content
+            });
+        }
+    }
+```
