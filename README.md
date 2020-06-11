@@ -20,7 +20,7 @@ npm install -g openupm-cli
 ## Usage
 Assets and scripts are available under the `saltbox.terminal` namespace.
 
-The default Terminal is available under Window dropdown. The first time you open the terminal it will create two scriptable objects `Commands` and `TerminalSettings`. 
+The default Terminal is available under the Window dropdown. The first time you open the terminal it will create two scriptable objects `Commands` and `TerminalSettings` in your project root. 
 
 #### TerminalSettings 
 `TerminalSettings` is used to store information about the terminal editor window. it can't be moved, it's only used by the editor so it won't be compiled into your game.

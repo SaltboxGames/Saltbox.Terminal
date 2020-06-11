@@ -6,6 +6,10 @@ using System.Linq;
 using System.Collections.Generic;
 using UnityEngine;
 
+#if UNITY_EDITOR
+using UnityEditor;
+#endif
+
 using CommandLine;
 using CommandLine.Text;
 
@@ -49,23 +53,35 @@ namespace Saltbox.Terminal
             commands.Add("help", new HelpCommand());
             commands.Add("clear", new ClearCommand());
 
-            if(Application.isPlaying && runtimeCommands != null)
+#if UNITY_EDITOR
+            if (EditorApplication.isPlayingOrWillChangePlaymode)
             {
-                foreach (ScriptableCommand command in runtimeCommands)
+                if (runtimeCommands != null)
                 {
-                    AddCommand(command.Name, command);
+                    foreach (ScriptableCommand command in runtimeCommands)
+                    {
+                        AddCommand(command.Name, command);
+                    }
                 }
             }
 
-#if UNITY_EDITOR
-            if(editorCommands != null)
+            if (editorCommands != null)
             {
                 foreach (ScriptableCommand command in editorCommands)
                 {
                     AddCommand(command.Name, command);
                 }
             }
+#else
+            if (runtimeCommands != null)
+            {
+                foreach (ScriptableCommand command in runtimeCommands)
+                {
+                    AddCommand(command.Name, command);
+                }
+            }
 #endif
+
         }
 
         public void AddControl(ITerminalControl control)
