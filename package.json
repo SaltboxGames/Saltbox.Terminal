@@ -1,7 +1,7 @@
 {
     "name": "com.saltboxgames.saltbox.terminal",
     "displayName": "Saltbox Terminal",
-    "version": "1.0.1",
+    "version": "1.0.2",
     "unity": "2019.3",
     "description": "Command Line Terminal for Unity",
     "author": {

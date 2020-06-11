@@ -1,3 +1,10 @@
+## [1.0.2](https://github.com/SaltboxGames/Saltbox.Terminal/compare/v1.0.1...v1.0.2) (2020-06-11)
+
+
+### Bug Fixes
+
+* runtime commands are now added in playmode ([f8affb2](https://github.com/SaltboxGames/Saltbox.Terminal/commit/f8affb29e0ba6fb309780c45daafae85e33d78ec))
+
 ## [1.0.1](https://github.com/SaltboxGames/Saltbox.Terminal/compare/v1.0.0...v1.0.1) (2020-05-25)
 
 
